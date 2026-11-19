@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Áudios Mulher Conectada - by Catiana A. Oliveira</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Luzes suaves e aveludadas no fundo -->
+  <div class="glow-bg glow-1"></div>
+  <div class="glow-bg glow-2"></div>
+  <div class="glow-bg glow-3"></div>
+
+  <div class="app-container">
+    <!-- Cabeçalho -->
+    <header class="header">
+      <div class="lotus-icon">
+        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2C12 2 8 8 8 13a4 4 0 0 0 8 0c0-5-4-11-4-11z"/>
+          <path d="M12 13c-3-2-7-1-8 2 2 4 7 4 8-2z"/>
+          <path d="M12 13c3-2 7-1 8 2-2 4-7 4-8-2z"/>
+          <path d="M12 13v7"/>
+          <path d="M9 20c2 1 4 1 6 0"/>
+        </svg>
+      </div>
+      <h1 class="main-title">Áudios Mulher Conectada</h1>
+      <p class="subtitle">by Catiana A. Oliveira</p>
+      <div class="tagline">✦ Escolha o seu momento de conexão, ative a repetição e acompanhe a letra ✦</div>
+
+      <!-- Menu de Temas / Categorias -->
+      <nav class="categories-nav" id="categoriesNav">
+        <!-- Pílulas de filtro geradas dinamicamente via JS -->
+      </nav>
+    </header>
+
+    <!-- Grid de Cards de Áudio -->
+    <main class="audios-grid" id="audiosGrid">
+      <!-- Cards gerados via JavaScript -->
+    </main>
+  </div>
+
+  <!-- Player Fixo Inferior -->
+  <footer class="bottom-player" id="bottomPlayer">
+    <div class="player-content">
+      <!-- Info do Áudio -->
+      <div class="track-info">
+        <div class="disc-thumbnail" id="playerThumb">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+            <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+          </svg>
+        </div>
+        <div class="track-details">
+          <span class="track-title" id="playerTitle">Selecione um áudio</span>
+          <span class="track-subtitle" id="playerSubtitle">Mulher Conectada</span>
+        </div>
+      </div>
+
+      <!-- Controles Centrais -->
+      <div class="player-controls">
+        <div class="buttons-row">
+          <!-- Botão Repetição -->
+          <button class="ctrl-btn" id="btnLoop" title="Ativar repetição contínua">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="17 1 21 5 17 9"></polyline>
+              <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
+              <polyline points="7 23 3 19 7 15"></polyline>
+              <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
+            </svg>
+            <span class="loop-badge">1</span>
+          </button>
+
+          <!-- Play/Pause Principal -->
+          <button class="main-play-btn" id="btnMainPlay" title="Tocar / Pausar">
+            <svg id="mainPlayIcon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+          </button>
+
+          <!-- Botão Letra Sincronizada -->
+          <button class="ctrl-btn" id="btnLyrics" title="Acompanhar texto sincronizado (Spotify)">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              <line x1="8" y1="9" x2="16" y2="9"></line>
+              <line x1="8" y1="13" x2="14" y2="13"></line>
+            </svg>
+            <span class="lyrics-label">Letra</span>
+          </button>
+        </div>
+
+        <!-- Barra de Progresso com Tempo -->
+        <div class="progress-bar-wrapper">
+          <span class="time-label" id="currentTime">00:00</span>
+          <div class="progress-bar" id="progressBar">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+          <span class="time-label" id="totalDuration">00:00</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal / Painel de Letra Estilo Spotify -->
+  <div class="lyrics-modal" id="lyricsModal">
+    <div class="lyrics-backdrop" id="lyricsBackdrop"></div>
+    <div class="lyrics-container">
+      <div class="lyrics-header">
+        <div class="lyrics-audio-meta">
+          <span class="lyrics-tag">ACOMPANHAMENTO VIBRACIONAL</span>
+          <h2 id="lyricsTrackTitle">Despertar Matinal</h2>
+        </div>
+        <button class="close-lyrics-btn" id="btnCloseLyrics" title="Fechar">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="lyrics-scroll-area" id="lyricsScrollArea">
+        <!-- Frases sincronizadas geradas via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Elemento de Áudio Oculto -->
+  <audio id="audioElement" preload="metadata"></audio>
+
+  <script src="app.js"></script>
+</body>
+</html>
