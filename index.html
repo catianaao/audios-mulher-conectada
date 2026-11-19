@@ -31,7 +31,20 @@
       <p class="subtitle">by Catiana A. Oliveira</p>
       <div class="tagline">✦ Escolha o seu momento de conexão, ative a repetição e acompanhe a letra ✦</div>
 
-      <!-- Menu de Temas / Categorias -->
+      <!-- Botão Menu Retrátil (ideal para mobile) -->
+      <div class="menu-control-wrapper">
+        <button class="menu-toggle-btn" id="menuToggleBtn" aria-expanded="false" aria-label="Abrir menu de temas">
+          <span class="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <span class="menu-toggle-text">Menu de Temas</span>
+          <span class="current-category-pill" id="currentCategoryPill">Todos os Áudios</span>
+        </button>
+      </div>
+
+      <!-- Menu de Temas / Categorias (Gaveta retrátil no mobile, integrado no desktop) -->
       <nav class="categories-nav" id="categoriesNav">
         <!-- Pílulas de filtro geradas dinamicamente via JS -->
       </nav>

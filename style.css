@@ -128,6 +128,74 @@ body {
 }
 
 /* Menu de Filtro / Categorias */
+.menu-control-wrapper {
+  display: none; /* Só visível no celular */
+  margin-bottom: 12px;
+}
+
+.menu-toggle-btn {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(229, 130, 157, 0.35);
+  border-radius: 30px;
+  padding: 8px 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(229, 130, 157, 0.15);
+  transition: all 0.25s ease;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.menu-toggle-btn:hover {
+  background: #FFF;
+  border-color: var(--primary-pink);
+  transform: translateY(-1px);
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 18px;
+  height: 13px;
+}
+
+.hamburger-icon span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: var(--primary-pink-dark);
+  border-radius: 2px;
+  transition: all 0.25s ease;
+}
+
+.menu-toggle-btn.active .hamburger-icon span:nth-child(1) {
+  transform: translateY(5.5px) rotate(45deg);
+}
+.menu-toggle-btn.active .hamburger-icon span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle-btn.active .hamburger-icon span:nth-child(3) {
+  transform: translateY(-5.5px) rotate(-45deg);
+}
+
+.menu-toggle-text {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 0.3px;
+}
+
+.current-category-pill {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--primary-pink-dark);
+  background: var(--primary-pink-soft);
+  padding: 2px 8px;
+  border-radius: 12px;
+}
+
 .categories-nav {
   display: flex;
   align-items: center;
@@ -135,6 +203,7 @@ body {
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 10px;
+  transition: all 0.3s ease;
 }
 
 .category-pill {
@@ -838,13 +907,47 @@ body {
     font-size: 2.1rem;
   }
 
+  .tagline {
+    margin-bottom: 16px;
+  }
+
+  /* Botão Menu com os 3 tracinhos visível no celular */
+  .menu-control-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* A lista de temas vira gaveta retrátil */
   .categories-nav {
-    gap: 6px;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    background: rgba(255, 255, 255, 0.94);
+    border: 1px solid rgba(229, 130, 157, 0.35);
+    border-radius: 20px;
+    padding: 12px;
+    margin: 10px auto 20px;
+    max-width: 330px;
+    width: 90%;
+    box-shadow: 0 10px 25px rgba(229, 130, 157, 0.18);
+    backdrop-filter: blur(14px);
+    animation: fadeInMenu 0.25s ease forwards;
+  }
+
+  .categories-nav.open {
+    display: flex;
+  }
+
+  @keyframes fadeInMenu {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 
   .category-pill {
-    padding: 7px 14px;
-    font-size: 0.78rem;
+    padding: 11px 16px;
+    font-size: 0.86rem;
+    justify-content: flex-start;
+    border-radius: 14px;
   }
 
   .audios-grid {

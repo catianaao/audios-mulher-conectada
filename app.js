@@ -216,6 +216,8 @@ const AUDIOS_DATA = [
 // Elementos do DOM
 const audioElement = document.getElementById('audioElement');
 const categoriesNav = document.getElementById('categoriesNav');
+const menuToggleBtn = document.getElementById('menuToggleBtn');
+const currentCategoryPill = document.getElementById('currentCategoryPill');
 const audiosGrid = document.getElementById('audiosGrid');
 const bottomPlayer = document.getElementById('bottomPlayer');
 const playerThumb = document.getElementById('playerThumb');
@@ -254,10 +256,28 @@ function renderCategories() {
     btn.innerHTML = `<span class="cat-icon">${cat.icon}</span> ${cat.name}`;
     btn.addEventListener('click', () => {
       selectedCategory = cat.id;
+      if (currentCategoryPill) {
+        currentCategoryPill.textContent = cat.name;
+      }
+      // Fecha a gaveta no celular após escolher o tema
+      if (categoriesNav.classList.contains('open')) {
+        categoriesNav.classList.remove('open');
+        menuToggleBtn.classList.remove('active');
+        menuToggleBtn.setAttribute('aria-expanded', 'false');
+      }
       renderCategories();
       renderGrid();
     });
     categoriesNav.appendChild(btn);
+  });
+}
+
+// Controle do Menu Hambúrguer (Mobile)
+if (menuToggleBtn) {
+  menuToggleBtn.addEventListener('click', () => {
+    const isOpen = categoriesNav.classList.toggle('open');
+    menuToggleBtn.classList.toggle('active', isOpen);
+    menuToggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
   });
 }
 
