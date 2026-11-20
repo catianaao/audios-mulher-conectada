@@ -67,11 +67,69 @@ const AUDIOS_DATA = [
     category: "despertar",
     categoryLabel: "Despertar Matinal",
     subtitle: "Autoconfiança & poder interior",
-    src: "",
-    duration: "--:--",
+    src: "áudios/2- Eu sou capaz.m4a",
+    duration: "05:07",
     defaultLoop: true,
     available: false,
-    lyrics: []
+    releaseDate: "2026-11-27T00:00:00-03:00", // Libera automaticamente dia 27/11
+    releaseDateLabel: "27 de Novembro",
+    lyrics: [
+      { time: 0, text: "Bom dia!" },
+      { time: 2, text: "Pelos próximos minutos, esse tempo é só seu." },
+      { time: 5, text: "Feche os olhos, se puder." },
+      { time: 8, text: "Inspire pelo nariz, bem devagar..." },
+      { time: 13, text: "E solte pela boca, soltando os ombros." },
+      { time: 17, text: "De novo: inspire..." },
+      { time: 21, text: "...e solte." },
+      { time: 24, text: "Agora perceba: você acordou. Você chegou até aqui." },
+      { time: 29, text: "E antes mesmo de o dia começar, já escolheu cuidar da sua mente." },
+      { time: 34, text: "Isso já diz muito sobre você." },
+      { time: 38, text: "Vou te contar uma coisa que muda a forma de ver a si mesma:" },
+      { time: 42, text: "O seu cérebro não é fixo. Ele é vivo." },
+      { time: 47, text: "Existe um nome para isso: Neuroplasticidade." },
+      { time: 51, text: "É a capacidade que o cérebro tem de criar novas conexões e de mudar a sua própria estrutura, em qualquer idade." },
+      { time: 60, text: "Pense numa trilha no meio do mato: quanto mais você passa por ela, mais larga e fácil ela fica." },
+      { time: 68, text: "E o caminho que você deixa de usar vai sendo coberto pelo mato." },
+      { time: 74, text: "Os seus pensamentos funcionam assim: aquele 'eu não consigo', repetido por anos, virou uma estrada larga." },
+      { time: 82, text: "Não é porque é verdade. É porque foi muito percorrida." },
+      { time: 87, text: "Então eu te pergunto: qual é a trilha que você mais tem percorrido?" },
+      { time: 93, text: "A boa notícia é que trilha nova se abre com repetição, atenção e emoção." },
+      { time: 99, text: "E é exatamente isso que a gente vai fazer agora." },
+      { time: 102, text: "Vou falar uma frase e você repete comigo — em voz alta ou só por dentro, mas sentindo:" },
+      { time: 110, text: "Eu sou capaz." },
+      { time: 114, text: "Eu sou capaz." },
+      { time: 117, text: "Eu sou capaz de aprender, de mudar e de recomeçar quantas vezes precisar." },
+      { time: 125, text: "Percebeu algo no corpo quando disse isso? Uma resistência? Um aperto? Ou um alívio?" },
+      { time: 134, text: "Qualquer reação está certa. Ela só mostra onde a trilha antiga ainda está forte — e é ali que o trabalho acontece." },
+      { time: 142, text: "Agora, deixe as perguntas trabalharem. Não precisa responder. Apenas solte e permita que a informação venha à tona:" },
+      { time: 150, text: "Se eu realmente soubesse que sou capaz, o que eu faria hoje de diferente?" },
+      { time: 156, text: "Qual foi uma vez em que eu duvidei de mim e, mesmo assim, consegui?" },
+      { time: 162, text: "Que força eu já tenho aqui dentro e ainda não estou usando?" },
+      { time: 167, text: "Se o medo não estivesse no comando, qual seria o meu próximo passo?" },
+      { time: 172, text: "Continue de olhos fechados. Agora imagine o seu dia de hoje — não o dia perfeito, o dia real." },
+      { time: 179, text: "Veja aquela situação que costuma te tirar do eixo: a conversa difícil, a decisão adiada, a tarefa que você vem empurrando..." },
+      { time: 188, text: "E veja você ali: com os ombros abertos, a respiração tranquila, a voz firme." },
+      { time: 194, text: "Onde essa confiança aparece no seu corpo? No peito? Na barriga? Nas mãos?" },
+      { time: 200, text: "Fique com essa sensação." },
+      { time: 202, text: "Quando você imagina com detalhes e com emoção, o cérebro ativa áreas parecidas com as de uma experiência real." },
+      { time: 210, text: "Você está treinando agora, antes de o dia começar." },
+      { time: 214, text: "Agora vem a parte que faz a diferença: pensar sozinho não muda nada." },
+      { time: 219, text: "Qual é o menor passo que você pode dar hoje? Um passo tão pequeno que seria difícil dizer não. Escolha agora." },
+      { time: 230, text: "E quando a insegurança aparecer — porque ela vai aparecer —, você vai respirar, lembrar que é capaz e dar esse passo mesmo assim." },
+      { time: 241, text: "A confiança não vem antes da ação. Ela é construída com a ação." },
+      { time: 247, text: "Cada passo pequeno manda um recado ao seu cérebro: 'Isso é possível para mim'." },
+      { time: 254, text: "Para fechar, repita comigo:" },
+      { time: 256, text: "Eu sou capaz." },
+      { time: 257, text: "Eu confio no meu processo." },
+      { time: 260, text: "Eu aprendo a cada dia." },
+      { time: 263, text: "O meu cérebro está se moldando a favor da minha evolução." },
+      { time: 267, text: "Eu sou capaz. E hoje eu vou agir como alguém que sabe disso." },
+      { time: 272, text: "Inspire fundo mais uma vez..." },
+      { time: 276, text: "E ao soltar o ar, volte devagar para este lugar. Mexa os dedos das mãos, dos pés... e abra os olhos quando sentir que é hora." },
+      { time: 288, text: "Repetir é o que transforma. Cada vez que você volta aqui, essa trilha fica mais forte." },
+      { time: 295, text: "Agora, viva o seu dia." },
+      { time: 298, text: "Você é capaz. ✨" }
+    ]
   },
   {
     id: 3,
@@ -281,6 +339,19 @@ if (menuToggleBtn) {
   });
 }
 
+// Checar se algum áudio já atingiu a data de liberação automática
+function isAudioUnlocked(item) {
+  if (item.available) return true;
+  if (item.releaseDate) {
+    const now = new Date();
+    const release = new Date(item.releaseDate);
+    if (now >= release) {
+      return true;
+    }
+  }
+  return false;
+}
+
 // Renderizar Grade de Cards
 function renderGrid() {
   audiosGrid.innerHTML = '';
@@ -293,17 +364,22 @@ function renderGrid() {
   filtered.forEach((item) => {
     const realIndex = AUDIOS_DATA.findIndex(a => a.id === item.id);
     const card = document.createElement('div');
+    const unlocked = isAudioUnlocked(item);
     const isCurrentActive = currentTrackIndex === realIndex && isPlaying;
     
-    card.className = `audio-card ${item.available ? '' : 'is-coming-soon'} ${isCurrentActive ? 'active' : ''}`;
+    card.className = `audio-card ${unlocked ? '' : 'is-coming-soon'} ${isCurrentActive ? 'active' : ''}`;
     card.id = `card-${realIndex}`;
 
     // Status / Badges no topo do Card
     let topBadgeHtml = '';
     if (item.isPremium) {
       topBadgeHtml = `<span class="card-status-badge badge-premium">🔒 Exclusivo</span>`;
-    } else if (!item.available) {
-      topBadgeHtml = `<span class="card-status-badge badge-soon">✨ Em breve</span>`;
+    } else if (!unlocked) {
+      if (item.releaseDateLabel) {
+        topBadgeHtml = `<span class="card-status-badge badge-soon">📅 Disponível em ${item.releaseDateLabel}</span>`;
+      } else {
+        topBadgeHtml = `<span class="card-status-badge badge-soon">✨ Em breve</span>`;
+      }
     } else if (item.defaultLoop) {
       topBadgeHtml = `<span class="card-status-badge badge-loop">🔁 Repetição</span>`;
     } else {
@@ -316,6 +392,15 @@ function renderGrid() {
           ? '<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>'
           : '<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>');
 
+    let durationLabel = 'Áudio em produção';
+    if (item.isPremium) {
+      durationLabel = 'Áudio em produção • Desbloquear';
+    } else if (unlocked) {
+      durationLabel = item.duration;
+    } else if (item.releaseDateLabel) {
+      durationLabel = `Liberação em ${item.releaseDateLabel}`;
+    }
+
     card.innerHTML = `
       ${topBadgeHtml}
       <button class="card-play-btn ${item.isPremium ? 'card-lock-btn' : ''}" aria-label="${item.isPremium ? 'Desbloquear' : 'Tocar'} ${item.title}">
@@ -324,7 +409,7 @@ function renderGrid() {
       <div class="card-meta-tag">${item.categoryLabel}</div>
       <div class="card-title">${item.title}</div>
       <div class="card-subtitle">${item.subtitle}</div>
-      <div class="card-duration">${item.isPremium ? 'Áudio em produção • Desbloquear' : (item.available ? item.duration : 'Áudio em produção')}</div>
+      <div class="card-duration">${durationLabel}</div>
     `;
 
     card.addEventListener('click', () => {
@@ -332,8 +417,8 @@ function renderGrid() {
         showPremiumModal(item);
         return;
       }
-      if (!item.available || !item.src) {
-        showComingSoonToast(item.title);
+      if (!unlocked || !item.src) {
+        showComingSoonToast(item.title, item.releaseDateLabel);
         return;
       }
       playTrack(realIndex);
@@ -344,10 +429,14 @@ function renderGrid() {
 }
 
 // Toast suave para "Em Breve"
-function showComingSoonToast(title) {
+function showComingSoonToast(title, releaseDateLabel) {
   const toast = document.createElement('div');
   toast.className = 'toast-notification';
-  toast.innerHTML = `🌸 O áudio <strong>"${title}"</strong> estará disponível em breve!`;
+  if (releaseDateLabel) {
+    toast.innerHTML = `📅 O áudio <strong>"${title}"</strong> será liberado no dia <strong>${releaseDateLabel}</strong>! 🌸`;
+  } else {
+    toast.innerHTML = `🌸 O áudio <strong>"${title}"</strong> estará disponível em breve!`;
+  }
   document.body.appendChild(toast);
   setTimeout(() => toast.classList.add('show'), 10);
   setTimeout(() => {
@@ -430,7 +519,7 @@ function playTrack(index) {
 // Alternar Play / Pause
 function togglePlayPause() {
   if (currentTrackIndex === -1) {
-    const firstAvailable = AUDIOS_DATA.findIndex(a => a.available && a.src);
+    const firstAvailable = AUDIOS_DATA.findIndex(a => isAudioUnlocked(a) && a.src);
     if (firstAvailable !== -1) playTrack(firstAvailable);
     return;
   }
